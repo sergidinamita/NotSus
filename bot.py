@@ -1,1 +1,2 @@
-print("Hello Wordl")
+def run():
+    print("Hello Wordl")
