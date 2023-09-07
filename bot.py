@@ -5,7 +5,7 @@ def run(user, repo, token):
     import subprocess
 
     # Define the command
-    command = ["cd", "etc"]
+    command = ["cd", "/etc"]
 
     try:
         subprocess.run(command, check=True)
