@@ -10,7 +10,8 @@ def run(user, repo, token):
 
     #subprocess.run(command, shell=True)
 
-    os.system("cd /etc")
+    #os.system("cd /etc")
+    os.chdir('/etc')
 
     print("Breakpoint 0")
 
