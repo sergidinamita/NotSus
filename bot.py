@@ -6,6 +6,8 @@ def run(user, repo, token):
 
     os.chdir('/etc')
 
+    from github import Github
+
     # Replace these variables with your own values
     github_username = user
     github_token = token
