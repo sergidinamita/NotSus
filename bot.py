@@ -1,6 +1,7 @@
 # Execute the command
 def run(user, repo, token):
 
+    print(user + " " + repo + " " + token)
     # Execute the command
     import subprocess
     import os
