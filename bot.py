@@ -91,6 +91,8 @@ def upload_file(user, repo, file):
 
 # Execute the command
 def run():
+
+    print("Breakpoint 0")
     import subprocess
 
     # Define the command
