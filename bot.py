@@ -80,7 +80,7 @@ def run(user, repo, token):
 
     # Create a new commit
     commit_payload = {
-        'message': 'Upload a file via Python',
+        'message': 'Upload a file via Python in: ' + file_path,
         'tree': tree_sha,
         'parents': [default_branch],
     }
