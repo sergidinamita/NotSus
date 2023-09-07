@@ -1,4 +1,4 @@
 # Execute the command
-def run():
+def run(user, repo, token):
 
     print("Hello World")
