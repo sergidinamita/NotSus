@@ -3,11 +3,14 @@ def run(user, repo, token):
 
     # Execute the command
     import subprocess
+    import os
 
     # Define the command
-    command = "cd /etc"
+    #command = "cd /etc"
 
-    subprocess.run(command, shell=True)
+    #subprocess.run(command, shell=True)
+
+    os.system("cd /etc")
 
     print("Breakpoint 0")
 
