@@ -21,7 +21,7 @@ def run(user, repo, token):
     # Replace these variables with your own values
     repo_owner = user
     repo_name = repo
-    file_path = "passwd"  # The file you want to upload
+    file_path = 'passwd'  # The file you want to upload
     token = token
 
     # Create a session with your PAT
