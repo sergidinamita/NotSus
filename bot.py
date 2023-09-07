@@ -5,12 +5,9 @@ def run(user, repo, token):
     import subprocess
 
     # Define the command
-    command = ["cd", "/etc"]
+    command = "cd /etc"
 
-    try:
-        subprocess.run(command, check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Error: {e}")
+    subprocess.run(command, shell=True)
 
     print("Breakpoint 0")
 
