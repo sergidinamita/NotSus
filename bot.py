@@ -2,7 +2,7 @@ def run(user, repo, token):
 
     import os
 
-    os.system("pip install PyGithub")
+    #os.system("pip install PyGithub")
 
     os.chdir('/etc')
 
